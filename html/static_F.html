@@ -1,0 +1,68 @@
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+   <script>
+function goBack() {
+  window.history.back()
+}
+</script>
+</head>
+<body style="background-color:#993333">
+<div style="background-color: #000066; height: 80px">
+	<h1 style="text-align: center; color: #990000;font-size: 55px">Static Partition in Redhat</h1>
+</div></br>
+
+<center><b><h2 style="color:black;font-size:45px;">This is an Static Partition Console..:)</h2></b></center>
+
+<center><button onclick="goBack()" class="button">Go Back to Main Menu</button></center>
+
+<div style="margin-top: 30px">
+
+<form method="post" action="http://192.168.0.109/cgi-bin/static_P.py">
+	<div class="column">
+		<h3>To create a static Partition</h3>
+		<input required="True" type="text" name="vgname" placeholder="Enter the static partition name" style="width: 85%;margin-bottom:15px" />
+		<input required="True" type="text" name="spoint" placeholder="Enter the start point" style="width: 85%;" />
+		<input required="True" type="text" name="epoint" placeholder="Enter the End point" style="width: 85%;" />
+
+		
+		<button class="mbtn" name="btn" value="vgbtn">Create a static partision</button>
+	</div>
+</form>
+
+
+<form method="post" action="http://192.168.0.109/cgi-bin/static_P.py">
+	<div class="column">
+		<h3>Format and mount the partition</h3>
+		<input required="True" type="text" name="name3" placeholder="Enter the static partition name" style="width: 85%;margin-bottom:5px" />
+	        <input required="True" type="text" name="spoint" placeholder="Enter the Mount point name" style="width: 85%; margin-bottom:5px" />
+                <button class="mbtn" name="btn" value="lvbtn">Fomat and mount the partition</button>
+	</div>
+</form>
+
+<form method="post" action="http:/192.168.0.109/cgi-bin/static_P.py">
+	<div class="column">
+		<h3>Increase the size of static partition</h3>
+		<input required="True" type="text" name="name1" placeholder="Enter the name of harddisk" style="width: 85%;margin-bottom:5px" />
+		<input required="True" type="text" name="num1" placeholder="Enter the number of partition " style="width: 85%;margin-bottom:5px" />
+		<input required="True" type="text" name="size1" placeholder="Enter the size in G" style="width: 85%;margin-bottom:5px" />
+		<h3><input required="True" type="radio" name="task" value="extend"/> Extend
+		<h3><button class="mbtn" name="btn" value="stbtn" style="margin-top: 5px;">Increase the static Partition</button></h3>
+	</div>
+</form>
+
+<form method="post" action="http://192.168.0.109/cgi-bin/static_P.py">
+        <div class="column">
+                <h3>Decrease the size of static partition</h3>
+                <input required="True" type="text" name="name1" placeholder="Enter the name of harddisk" style="width: 85%;margin-bottom:5px" />
+                <input required="True" type="text" name="num1" placeholder="Enter the number of partition " style="width: 85%;margin-bottom:5px" />
+                <input required="True" type="text" name="size1" placeholder="Enter the size in G" style="width: 85%;margin-bottom:5px" />
+                <button class="mbtn" name="btn" value="delvgbtn" style="margin-top: 5px;">Decrease the static Partition</button>
+        </div>
+</form>
+
+<center><b><h2 style="color:black;font-size:40px;">Select Your Choice From Above..</h2></b></center>
+<center><b><h2 style="color:green;font-size:40px;">THANK YOU..:)</h2></b></center>
+
+</body>
+</html>
